@@ -1,0 +1,17 @@
+<apex:page showHeader="false" sideBar="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false">
+
+    <!--The Live agent deploy code-->
+    <apex:outputText value="{!$CurrentPage.parameters.deploy}" escape="false"/>
+    
+   
+    <script>
+
+      liveagent.addCustomDetail('Contact Email', '{!$CurrentPage.parameters.contactemail}').map('Contact', 'Email', false, true);
+      liveagent.findOrCreate('Contact').map('Email','Contact E-mail',true,true,false); 
+      liveagent.setName('{!$CurrentPage.parameters.contactname}');
+    
+      //extra prechat APi implemention 
+      {!$CurrentPage.parameters.prechatapi}
+    
+    </script>
+</apex:page>

@@ -1,0 +1,8 @@
+<design:component>
+	<design:attribute name="deploycode" label="Deploy Code" description="Deployment Code" />
+    <design:attribute name="Contact_Name" label="Contact Name" description="Contact Name" />
+    <design:attribute name="Contact_Email" label="Contact Email" description="Contact Email" />
+    <design:attribute name="Width" label="Width" description="Width" />
+    <design:attribute name="Height" label="Height" description="Height" />
+    <design:attribute name="PrechatApi" label="Custom Prechat logic(Optional)" description="Extra logic before chat, eg. create or bring lead into Console" />
+</design:component>

@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+	
+    <aura:attribute name="deploycode" type="String"  />
+    <aura:attribute name="Contact_Name" type="String" />
+    <aura:attribute name="Contact_Email" type="String" />
+    <aura:attribute name="PrechatApi" type="String" />
+    <aura:attribute name="Width" type="String" default="280"/>
+    <aura:attribute name="Height" type="String" default="240"/>
+
+    <iframe src="{!'../apex/livechatslides?deploy=' + v.deploycode + '&amp;contactemail=' + v.Contact_Email + '&amp;contactname=' + v.Contact_Name + '&amp;prechatapi=' + v.PrechatApi}" 
+     style="{!'margin: 0; padding: 0; border: none; width:'+v.Width+'px; height:'+ v.Height +'px;'}"/>
+
+</aura:component>
